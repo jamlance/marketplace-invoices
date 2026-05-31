@@ -1,0 +1,60 @@
+@import "@inkress/apps-core/styles.css";
+
+/* Invoices — invoice table + line-item editor. */
+
+.iv-num { font-family: var(--mono); font-size: 0.85rem; letter-spacing: 0.02em; }
+.iv-row-actions { display: flex; gap: 6px; justify-content: flex-end; align-items: center; flex-wrap: wrap; }
+.iv-note { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
+
+.iv-form { display: flex; flex-direction: column; gap: 12px; min-width: 360px; }
+.iv-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.iv-field { display: flex; flex-direction: column; gap: 5px; }
+
+.iv-items-head { display: flex; align-items: center; justify-content: space-between; margin-top: 4px; }
+.iv-items-head .bv-label { margin-bottom: 0; }
+.iv-items { display: flex; flex-direction: column; gap: 7px; }
+.iv-item-row { display: grid; grid-template-columns: 1fr 64px 96px auto; gap: 7px; align-items: center; }
+.iv-item-row .iv-qty, .iv-item-row .iv-price { text-align: right; }
+.iv-del { padding: 0; width: 30px; justify-content: center; }
+.iv-total { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; background: var(--panel); border-radius: 9px; margin-top: 2px; }
+.iv-total-val { font-size: 1.2rem; font-weight: 800; }
+
+/* toolbar + filters */
+.iv-toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.iv-filterbar { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; margin: 14px 0 10px; }
+.iv-seg { display: inline-flex; gap: 4px; background: var(--panel); border-radius: 10px; padding: 4px; flex-wrap: wrap; }
+.iv-seg-btn { display: inline-flex; align-items: center; gap: 6px; border: none; background: transparent; color: var(--muted); font-weight: 600; font-size: 0.85rem; padding: 6px 11px; border-radius: 7px; cursor: pointer; }
+.iv-seg-btn.is-on { background: var(--card, #fff); color: var(--text); box-shadow: 0 1px 3px rgba(20,30,60,.08); }
+.iv-seg-n { font-size: 0.72rem; background: rgba(120,130,150,.18); border-radius: 10px; padding: 1px 6px; font-variant-numeric: tabular-nums; }
+.iv-search { min-width: 200px; flex: 0 1 260px; }
+
+/* breakdown in form */
+.iv-brk { display: flex; flex-direction: column; gap: 5px; padding: 10px 12px; background: var(--panel); border-radius: 9px; }
+.iv-brk-row { display: flex; align-items: center; justify-content: space-between; font-size: 0.9rem; color: var(--muted); }
+.iv-brk .iv-total { background: transparent; padding: 8px 0 0; margin-top: 4px; border-top: 1px solid var(--border, #e6eaf0); }
+
+/* autocomplete */
+.iv-ac { position: relative; }
+.iv-ac-results { position: absolute; z-index: 30; top: calc(100% + 3px); left: 0; right: 0; background: var(--card, #fff); border: 1px solid var(--border, #e6eaf0); border-radius: 10px; box-shadow: 0 12px 32px rgba(20,30,60,.16); max-height: 220px; overflow: auto; }
+.iv-ac-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 12px; cursor: pointer; font-size: 0.9rem; }
+.iv-ac-row:hover { background: var(--panel); }
+.iv-ac-row strong { font-weight: 600; }
+
+.iv-item-wrap { display: flex; flex-direction: column; }
+.iv-check { display: flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--muted); cursor: pointer; }
+.iv-field-color input[type="color"] { width: 56px; height: 38px; padding: 2px; border-radius: 8px; cursor: pointer; }
+
+/* settings preview */
+.iv-settings-cols { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; align-items: start; }
+@media (max-width: 760px) { .iv-settings-cols { grid-template-columns: 1fr; } }
+.iv-preview { --ac: #1f6feb; border: 1px solid var(--border, #e6eaf0); border-radius: 12px; overflow: hidden; background: #fff; color: #1f2430; }
+.iv-pv-bar { height: 5px; background: var(--ac); }
+.iv-pv-body { padding: 18px; }
+.iv-pv-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+.iv-pv-head strong { font-size: 1rem; }
+.iv-pv-addr { color: #6b7280; font-size: 0.78rem; white-space: pre-line; margin-top: 2px; }
+.iv-pv-num { font-family: var(--mono); font-size: 0.8rem; color: #6b7280; }
+.iv-pv-line { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #eef1f5; font-size: 0.88rem; }
+.iv-pv-total { display: flex; justify-content: space-between; padding-top: 12px; font-weight: 800; font-size: 1.05rem; color: var(--ac); }
+.iv-pv-terms { color: #6b7280; font-size: 0.75rem; margin-top: 10px; }
+.iv-pv-foot { color: #9aa4b2; font-size: 0.75rem; margin-top: 14px; text-align: center; }

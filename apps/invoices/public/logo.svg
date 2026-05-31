@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img">
+  <defs>
+    <linearGradient id="lg-invoices" x1="32" y1="3" x2="32" y2="61" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60a5fa"/><stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect x="3" y="3" width="58" height="58" rx="15" fill="url(#lg-invoices)"/>
+  <rect x="3" y="3" width="58" height="58" rx="15" fill="#fff" opacity=".08"/>
+  <path fill="#fff" d="M22 16h14l8 8v22a2 2 0 0 1-2 2H22a2 2 0 0 1-2-2V18a2 2 0 0 1 2-2z"/><path fill="#1d4ed8" opacity=".25" d="M36 16l8 8h-8v-8z"/><g stroke="#1d4ed8" stroke-width="2.4" stroke-linecap="round"><path d="M26 30h12"/><path d="M26 36h12"/><path d="M26 42h8"/></g>
+</svg>
